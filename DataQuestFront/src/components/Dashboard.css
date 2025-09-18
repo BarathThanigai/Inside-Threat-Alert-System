@@ -1,0 +1,163 @@
+/* General Body & Background Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, rgba(134, 2, 2, 0.8), rgba(0, 0, 0, 0.9));
+    margin: 0;
+    padding: 20px;
+    color: #f5f5f5;
+    height: 100vh;
+    overflow: hidden; /* Disable body scroll */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main Dashboard Title */
+.header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #e0e0e0;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Flex container for dashboard widgets */
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden; /* Prevent body scroll */
+}
+
+/* Each Section (box) */
+section {
+    background: #2f3640;
+    border-radius: 8px;
+    padding: 15px;
+    flex: 1;
+    max-width:21%;
+    max-height: 83%;/* Restrict to screen */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid #444;
+    overflow: hidden; /* Prevent overflow outside box */
+}
+
+/* Section Titles */
+section h2 {
+    margin: 0 0 10px 0;
+    color: #ffffff;
+    border-bottom: 1px solid #4a525a;
+    padding-bottom: 8px;
+    font-weight: 500;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Scrollable Table Container */
+.table-container {
+    flex: 1;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+/* Table */
+/*.table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: auto;
+    overflow-x: hidden;
+}*/
+
+/* Sticky Header */
+.table thead {
+    position: sticky;
+    top: 0;
+    background: #1e1e1e;
+    z-index: 1;
+}
+
+/* Table Header Cells */
+.table th {
+    color: #a9b7c6;
+    font-weight: 600;
+    text-align: left;
+    padding: 10px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #444;
+}
+.table .anomaly {
+    width: 100%;
+    overflow-x: hidden;
+}
+.table .userlogs {
+    width: 100%;
+    overflow-x: hidden;
+}
+/* Table Cells */
+.table td {
+    padding: 10px;
+    width: 10px;
+    border-bottom: 1px solid #444;
+    color: #d0d0d0;
+    white-space: nowrap;
+}
+
+/* Hover Effect */
+.table tbody tr:hover {
+    background-color: #3a414b;
+}
+
+/* --- Alert Highlighting --- */
+.alert-high {
+    background-color: rgba(231, 76, 60, 0.15);
+    color: #ff8a80;
+}
+
+.alert-medium {
+    background-color: rgba(241, 196, 15, 0.15);
+    color: #ffd180;
+}
+
+.alert-low {
+    background-color: rgba(46, 204, 113, 0.15);
+    color: #b9f6ca;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex: 1;
+  padding: 10px;
+  overflow: hidden;
+  height: calc(100vh - 120px); /* fit screen minus header */
+}
+
+section {
+  background: #2f3640;
+  border-radius: 8px;
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.table-container {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+/* Sticky table header */
+.table thead {
+  position: sticky;
+  top: 0;
+  background: #1e1e1e;
+  z-index: 1;
+}
